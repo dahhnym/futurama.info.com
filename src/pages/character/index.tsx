@@ -13,6 +13,7 @@ const CharacterIndexPage: NextPage =  () => {
 
     return (
         <div>
+            <Button href="./">Back</Button>
             <Container>
                 {data.map((character: CharacterData) => {
                     const { id, images, name } = character;
@@ -41,6 +42,17 @@ const Card = styled.div`
 
 const ProfilePic = styled.img`
     max-width: 20vw;
+`
+
+const Button = styled.a`
+    display: inline-block;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border: solid 1px black;
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
 `
 
 export default CharacterIndexPage;
