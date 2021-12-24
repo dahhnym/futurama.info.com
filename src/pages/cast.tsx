@@ -24,7 +24,7 @@ const CastPage: NextPage = () => {
                     <div key={`futurama-cast-${id}`}>
                         <p>Name: {name}</p>
                         <p>Born: {born}</p>
-                        <p>IMDb: <a href={bio.url} target="_blank">{bio.url}</a></p>
+                        <p>IMDb: <a href={bio.url}>{bio.url}</a></p>
                     </div>
                 )
             })}
