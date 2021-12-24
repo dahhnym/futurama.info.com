@@ -1,10 +1,8 @@
 import { NextPage } from "next";
-import axios from "axios";
+import { fetcher } from "../../utils/fetcher";
 import useSWR from "swr";
 import { CharacterData } from "../../types/characters";
 import styled from "@emotion/styled";
-
-const fetcher = ( url: string) => axios(url).then((res) => res.data); 
 
 const CharacterIndexPage: NextPage =  () => {
     const { data, error } = useSWR('https://api.sampleapis.com/futurama/characters', fetcher);
