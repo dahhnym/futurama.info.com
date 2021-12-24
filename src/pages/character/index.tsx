@@ -3,12 +3,13 @@ import { fetcher } from "../../utils/fetcher";
 import useSWR from "swr";
 import { CharacterData } from "../../types/characters";
 import styled from "@emotion/styled";
+import { Error, Loading } from "../../components/"
 
 const CharacterIndexPage: NextPage =  () => {
     const { data, error } = useSWR('https://api.sampleapis.com/futurama/characters', fetcher);
 
-    if(error) return <div>An error occurred...</div>
-    if(!data) return <div>Loading...</div>
+    if(error) return <Error />
+    if(!data) return <Loading />
 
     return (
         <div>
