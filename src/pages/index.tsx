@@ -14,7 +14,7 @@ const MainPage: NextPage = () => {
                     </Link>
                 </li>
                 <li>
-                    <Link href="character">
+                    <Link href="characters">
                         <a>Character</a>
                     </Link>
                 </li>
