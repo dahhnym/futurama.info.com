@@ -28,9 +28,6 @@ const InfoPage: NextPage = () => {
                             <Link href={creators[0].url}>
                                 <a>{creators[0].name}, </a>
                             </Link> 
-                            <Link href={creators[1].url}>
-                                <a>{creators[1].name}</a>
-                            </Link>
                         </Content>
                         <Heading>Synopsis</Heading>
                         <Content>{synopsis}</Content>
