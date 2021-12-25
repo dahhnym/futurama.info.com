@@ -15,8 +15,6 @@ const CastPage: NextPage = () => {
 
     return (
         <div>
-            <Button href="./">Back</Button>
-            <Heading>This is Info Page.</Heading>
             {data.map((cast: CastData) => {
                 const {name, born, bio, id } = cast;
     

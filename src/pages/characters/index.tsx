@@ -13,7 +13,6 @@ const CharacterIndexPage: NextPage =  () => {
 
     return (
         <div>
-            <Button href="./">Back</Button>
             <Container>
                 {data.map((character: CharacterData) => {
                     const { id, images, name } = character;

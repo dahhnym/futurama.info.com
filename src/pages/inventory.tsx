@@ -4,7 +4,6 @@ import styled from "@emotion/styled";
 const InventoryPage: NextPage = () => {
     return (
         <div>
-            <Button href="./">Back</Button>
             <Heading>This is Inventory Page.</Heading>
         </div>
     )

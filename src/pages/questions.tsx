@@ -15,7 +15,6 @@ const QuizPage: NextPage = () => {
 
     return (
         <div>
-            <Button href="./">Back</Button>
             <Heading>This is Quiz Page.</Heading>
             {data.map((quiz: QuizData) => {
                 const { question, possibleAnswers, correctAnswer, id} = quiz;

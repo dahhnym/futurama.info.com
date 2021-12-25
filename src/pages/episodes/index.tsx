@@ -13,7 +13,6 @@ const EpisodeIndexPage: NextPage = () => {
 
     return (
         <div>
-            <Button href="./">Back</Button>
             <Heading>This is Episode Page.</Heading>
             {data.map((episode: EpisodeData) => {
                 const {number, title, writers, originalAirDate, desc, id } = episode;
