@@ -3,7 +3,7 @@ import { fetcher } from "../../utils/fetcher";
 import useSWR from "swr";
 import { CharacterData } from "../../types/characters";
 import styled from "@emotion/styled";
-import { Error, Loading } from "../../components/"
+import { Error, Loading } from "../../components"
 
 const CharacterIndexPage: NextPage =  () => {
     const { data, error } = useSWR('https://api.sampleapis.com/futurama/characters', fetcher);
