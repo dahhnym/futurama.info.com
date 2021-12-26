@@ -14,7 +14,7 @@ export const Navigation = () => {
     return (
     <Header>
       <NavContainer>
-        <Title href="/"><a>Futurama Info</a></Title>
+        <Link href="/"><Title>Futurama Info</Title></Link>
         <Nav>
           {ROUTES.map((routeObject: ROUTE) => {
             return (
