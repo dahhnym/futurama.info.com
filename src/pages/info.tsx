@@ -50,7 +50,6 @@ const Image = styled.img`
     display: block;
     width: 40vw;
     margin: 20px auto 50px;
-    box-shadow: 10px 13px 18px #aaa;
 `
 
 const Content = styled.p`
