@@ -1,7 +1,6 @@
 import Link from "next/link";
 import styled from "@emotion/styled";
 import { ROUTES } from "../../constants";
-import { css } from "@emotion/css";
 
 interface ROUTE {
   ID: number;
@@ -11,10 +10,11 @@ interface ROUTE {
 }
 
 export const Navigation = () => {
-  return (
-    <header>
+    
+    return (
+    <Header>
       <NavContainer>
-        <Title href="/">Futurama Info</Title>
+        <Title href="/"><a>Futurama Info</a></Title>
         <Nav>
           {ROUTES.map((routeObject: ROUTE) => {
             return (
@@ -41,18 +41,25 @@ export const Navigation = () => {
           })}
         </Nav>
       </NavContainer>
-    </header>
+    </Header>
   );
 };
 
+const Header = styled.header`
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 100;
+`
 
 const NavContainer = styled.nav`
-    border: solid 1px red;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 5vw;
     min-width: min-content;
+    border-bottom: solid 2px #f2f2f2;
 `
 const Title = styled.a`
     font-size: 2rem;
