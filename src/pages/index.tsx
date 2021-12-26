@@ -6,16 +6,15 @@ import styled from '@emotion/styled';
 const MainPage: NextPage = () => {
     return (
         <div>
-            <Title>Welcome to Futurama.info!</Title>
+            <Image src="https://drewscave.files.wordpress.com/2014/12/futurama-logo-with-characters.png" alt="" />
         </div>
     )
 }
 
 export default MainPage;
 
-const Title = styled.h1`
-    font-size: 30px;
-    font-weight: 600;
-    color: teal;
+const Image = styled.img`
+    height: 60vh;
+    display: block;
+    margin: 10vh auto 0;
 `
-
