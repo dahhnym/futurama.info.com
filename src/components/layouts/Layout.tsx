@@ -18,5 +18,6 @@ const Main = styled.main`
     max-width: 1580px;
     margin: 0 auto;
     position: relative;
-    top: 60px;
+    top: 80px;
+    box-sizing: border-box;
 `

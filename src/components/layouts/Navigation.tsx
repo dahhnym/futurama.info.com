@@ -14,7 +14,7 @@ export const Navigation = () => {
     return (
     <Header>
       <NavContainer>
-        <Link href="/"><Title>Futurama Info</Title></Link>
+        <Link href="/"><a><Title></Title></a></Link>
         <Nav>
           {ROUTES.map((routeObject: ROUTE) => {
             return (
@@ -47,7 +47,6 @@ export const Navigation = () => {
 
 const Header = styled.header`
     position: fixed;
-    top: 0;
     width: 100%;
     background-color: #fff;
     z-index: 100;
@@ -60,10 +59,23 @@ const NavContainer = styled.nav`
     padding: 0 5vw;
     min-width: min-content;
     border-bottom: solid 2px #f2f2f2;
+    box-shadow: 0px 2px 5px #f2f2f2;
+    height: 80px;
 `
-const Title = styled.a`
-    font-size: 2rem;
-    font-weight: 600;
+const Title = styled.div`
+    &:hover{
+        cursor: pointer;
+    }
+    display: block;
+    width: 200px;
+    height: 50px;    
+    background: center / cover no-repeat url("http://s3.amazonaws.com/gt7sp-prod/decal/24/50/23/5116169452536235024_1.png");
+
+`
+
+const Logo = styled.img`
+    height: 100px;
+    object-fit:contain;
 `
 
 const Nav = styled.ul`
