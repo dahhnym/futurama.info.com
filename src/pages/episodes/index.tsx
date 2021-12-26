@@ -33,17 +33,15 @@ const EpisodeIndexPage: NextPage = () => {
                     const {number, title, writers, originalAirDate, desc, id } = episode;
                     
                     return (
-                        <div>
-                            <Card key={`futurama-episode-${id}`}>
-                                <ul>
-                                    <Title>{title}</Title>
-                                    <li><Item>Episode</Item> #{number}</li>
-                                    <li><Item>Aired Date</Item> {originalAirDate}</li>
-                                    <li><Item>Written by</Item> {writers}</li>
-                                    <Desc>{desc}</Desc>
-                                </ul>
-                            </Card>
-                        </div>
+                        <Card key={`futurama-episode-${id}`}>
+                            <ul>
+                                <Title key={`episode-title-${id}`}>{title}</Title>
+                                <li key={`episode-number-${id}`}><Item>Episode</Item> #{number}</li>
+                                <li key={`episode-airdate-${id}`}><Item>Aired Date</Item> {originalAirDate}</li>
+                                <li key={`episode-writer-${id}`}><Item>Written by</Item> {writers}</li>
+                                <Desc key={`episode-desc-${id}`}>{desc}</Desc>
+                            </ul>
+                        </Card>
                     )
                 })}
             </Container>
