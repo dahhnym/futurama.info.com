@@ -6,12 +6,10 @@ export const Layout: React.FC = ({ children }) => {
   return (
       <div>
         <Navigation />
-        <div>
         <Main>
             { children }
         </Main>
         </div>
-      </div>
   )
 }
 
