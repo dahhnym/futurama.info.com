@@ -6,6 +6,7 @@ import useSWR from 'swr';
 import { Error, Loading } from '../components'
 import { InfoData } from '../types/info';
 import Link from "next/link";
+import { MEDIA_QUERY_ENDPOINT } from "../constants";
 
 const InfoPage: NextPage = () => {
     const { data, error } = useSWR('https://api.sampleapis.com/futurama/info', fetcher);
@@ -14,7 +15,7 @@ const InfoPage: NextPage = () => {
     if(!data) return <Loading />
 
     return (
-        <div>
+        <Container>
             <Image src="https://resizing.flixster.com/DXuKUIDKGNjh8PmejB406KwtOcQ=/fit-in/1152x864/v2/https://flxt.tmsimg.com/assets/p9932851_b_h9_ab.jpg" alt="Futurama Cover Image" />
             {data.map((info: InfoData) => {
                 const {synopsis, yearsAired, creators, id } = info;
@@ -34,9 +35,15 @@ const InfoPage: NextPage = () => {
                     </div>
                 )
             })}
-        </div>
+        </Container>
     )
 }
+
+const Container = styled.div`
+    @media (max-width: ${MEDIA_QUERY_ENDPOINT.LAPTOP}) {
+        margin: 0 10vw;
+    }
+`
 
 const Heading = styled.p`
     font-size: 1.5rem;

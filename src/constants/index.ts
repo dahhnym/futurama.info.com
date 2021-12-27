@@ -1,5 +1,14 @@
 export const API_ENDPOINT = 'https://api.sampleapis.com/futurama/';
 export const CASTIMAGE_ENDPOINT = 'https://m.media-amazon.com/images/M/'
+export const HOMEPAGE_IMAGE_URL = 'https://scontent-ssn1-1.xx.fbcdn.net/v/t1.6435-9/76640126_10157377205601620_4399745411187736576_n.jpg?_nc_cat=103&ccb=1-5&_nc_sid=973b4a&_nc_ohc=_xT0nBYFSb4AX_2IEJ9&_nc_ht=scontent-ssn1-1.xx&oh=00_AT8Gx00Yifm0svSK7WbeHLXHXvxH4KbQXttiN1uCsa9ZcQ&oe=61F018C5';
+
+export const MEDIA_QUERY_ENDPOINT = {
+    MOBILE: '640px',
+    TABLET: '1280px',
+    LAPTOP: '1580px',
+    DESKTOP: '1920px',
+    LARGE: '2560px'
+  }
 
 export const ROUTES  = [
     {

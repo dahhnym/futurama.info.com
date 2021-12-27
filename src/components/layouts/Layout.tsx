@@ -4,12 +4,12 @@ import { Navigation } from "."
 
 export const Layout: React.FC = ({ children }) => {
   return (
-      <div>
+    <div>
         <Navigation />
         <Main>
             { children }
         </Main>
-        </div>
+    </div>
   )
 }
 
