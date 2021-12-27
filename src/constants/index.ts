@@ -1,4 +1,5 @@
 export const API_ENDPOINT = 'https://api.sampleapis.com/futurama/';
+export const CASTIMAGE_ENDPOINT = 'https://m.media-amazon.com/images/M/'
 
 export const ROUTES  = [
     {
@@ -107,4 +108,68 @@ export const ROUTES  = [
         PATH: '/inventory',
         LABEL: 'Inventory',
     },
+]
+
+export const CASTIMAGE_ROUTES = [
+    {
+        PATH: 'MV5BMTYxMTE5OTEzNF5BMl5BanBnXkFtZTcwNzUxOTA4MQ@@._V1_UY317_CR76,0,214,317_AL_.jpg',
+        LABEL: 'Billy West'
+    },
+    {
+        PATH: 'MV5BNDU0ODA0NjMzMF5BMl5BanBnXkFtZTcwMjYyMTk3MQ@@._V1_UX214_CR0,0,214,317_AL_.jpg',
+        LABEL: 'Katey Sagal'
+    },
+    {
+        PATH: 'MV5BMzI2NTk1MzYxOV5BMl5BanBnXkFtZTcwMDE2MDQ4Nw@@._V1_UY317_CR9,0,214,317_AL_.jpg',
+        LABEL: 'John DiMaggio'
+    },
+    {
+        PATH: 'MV5BMTQxMTQ1NzY5N15BMl5BanBnXkFtZTcwMDY5NDUwOA@@._V1_UX214_CR0,0,214,317_AL_.jpg',
+        LABEL: 'Tress MacNeille'
+    },
+    {
+        PATH: 'MV5BMjU5ZWU2YzItZDU5Ny00NmFiLTljY2UtMmQyMDBjM2FkMjJjXkEyXkFqcGdeQXVyMjM2NTI3MA@@._V1_UY317_CR31,0,214,317_AL_.jpg',
+        LABEL: 'Phil LaMarr'
+    },
+    {
+        PATH: 'MV5BZjdhYTVjN2MtNDcyZC00MzRhLWJjNTgtZWQ3NzZkOTFhZGYwXkEyXkFqcGdeQXVyNDY2MDU4ODA@._V1_UX214_CR0,0,214,317_AL_.jpg',
+        LABEL: 'Lauren Tom'
+    },
+    {
+        PATH: 'MV5BMmI2N2FlYzEtMzEyMi00NWQ1LTk0MjYtNzI2MGRjMmYxZDM2XkEyXkFqcGdeQXVyMjQwMDg0Ng@@._V1_FMjpg_UX667_.jpg',
+        LABEL: 'Maurice LaMarche'
+    },
+    {
+        PATH: 'MV5BMTQ0NDQ2ODY5OV5BMl5BanBnXkFtZTYwMTQxOTgy._V1_UY317_CR9,0,214,317_AL_.jpg',
+        LABEL: 'David Herman'
+    },
+    {
+        PATH: 'MV5BMGFmNGMzNzItMDVkNy00ZmU3LThhNjAtMWJmYjUwMmFlZjE4XkEyXkFqcGdeQXVyMTMzMTM4Mjg0._V1_UY317_CR9,0,214,317_AL_.jpg',
+        LABEL: 'Kath Soucie'
+    },
+    {
+        PATH: 'MV5BMjM2MzU2ODYxMV5BMl5BanBnXkFtZTgwMzQ3MjcwMjE@._V1_UY317_CR12,0,214,317_AL_.jpg',
+        LABEL: 'Frank Welker'
+    },
+    {
+        PATH: 'MV5BMTYwNTk1NTA3Nl5BMl5BanBnXkFtZTYwNTAyMTM1._V1_UY317_CR22,0,214,317_AL_.jpg',
+        LABEL: 'Dawnn Lewis'
+    },
+    {
+        PATH: 'MV5BMTU3MzkzNDI0NV5BMl5BanBnXkFtZTYwMTMyNzE3._V1_UX214_CR0,0,214,317_AL_.jpg',
+        LABEL: 'Tom Kenny'
+    },
+    {
+        PATH: 'MV5BMjAyNDY5NDEwOV5BMl5BanBnXkFtZTcwMjY0ODYyMQ@@._V1_UY317_CR6,0,214,317_AL_.jpg',
+        LABEL: 'Dan Castellaneta'
+    },
+    {
+        PATH: 'MV5BNDU4MDUwMTAxOV5BMl5BanBnXkFtZTgwNjEzOTU4NjE@._V1_UY317_CR12,0,214,317_AL_.jpg',
+        LABEL: 'George Takei'
+    },
+    {
+        PATH: 'MV5BMjA3OTAxODMyNF5BMl5BanBnXkFtZTgwNDcwMTY3MTE@._V1_UX214_CR0,0,214,317_AL_.jpg',
+        LABEL: 'Phil Hendrie'
+    },
+
 ]
