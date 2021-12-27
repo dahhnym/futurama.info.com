@@ -7,20 +7,12 @@ import { CastData } from "../types/cast";
 import Link from "next/link";
 import { API_ENDPOINT, CASTIMAGE_ENDPOINT, CASTIMAGE_ROUTES } from "../constants";
 
-interface CASTIMAGE_ROUTE {
-    ID: number,
-    PATH: string,
-    LABEL: string,
-}
-
 const CastPage: NextPage = () => {
     const route = 'cast';
     const { data, error } = useSWR(`${API_ENDPOINT}${route}`, fetcher);
 
     if(error) return <Error />
     if(!data) return <Loading />
-
-
 
     return (
         <div>
