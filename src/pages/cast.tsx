@@ -49,7 +49,7 @@ const Name = styled.h1`
 const Icon = styled.span`
     border: solid 1px #EDBF17;
     background-color: #EDBF17;
-    font-weight: 500;
+    font-weight: 700;
     padding: 3px;
     border-radius: 3px;
     font-size: 0.7rem;
