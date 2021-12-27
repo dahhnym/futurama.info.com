@@ -1,17 +1,16 @@
 import type { NextPage } from 'next'
-import Link from 'next/link';
-
+import { HOMEPAGE_IMAGE_URL } from '../constants';
 import styled from '@emotion/styled';
 
-const MainPage: NextPage = () => {
+const HomePage: NextPage = () => {
     return (
         <div>
-            <Image src="https://drewscave.files.wordpress.com/2014/12/futurama-logo-with-characters.png" alt="" />
+            <Image src={HOMEPAGE_IMAGE_URL} alt="" />
         </div>
     )
 }
 
-export default MainPage;
+export default HomePage;
 
 const Image = styled.img`
     height: 60vh;
