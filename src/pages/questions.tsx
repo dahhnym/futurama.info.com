@@ -4,48 +4,36 @@ import { fetcher } from '../utils/fetcher';
 import useSWR from 'swr';
 import { Error, Loading } from '../components'
 import { API_ENDPOINT } from '../constants'
-import { QuizData } from "../types/questions";
+import { Quiz } from "../components/Quiz";
+import React, { useEffect, useState } from "react";
 
-const QuizPage: NextPage = () => {
+
+const QuestionsPage: NextPage = () => {
     const route = 'questions';
     const { data, error } = useSWR(`${API_ENDPOINT}${route}`, fetcher);
+    const [visible, setVisible] = useState(false);
 
     if(error) return <Error />
     if(!data) return <Loading />
 
     return (
         <div>
-            <Heading>This is Quiz Page.</Heading>
-            {data.map((quiz: QuizData) => {
-                const { question, possibleAnswers, correctAnswer, id} = quiz;
-                return (
-                    <div key={`futurama-question-${id}`}>
-                        <p>Question: {question}</p>
-                        <p>Option: {possibleAnswers}</p>
-                        <p>Answer: {correctAnswer}</p>
-                    </div>
-                )
-            })}
+            {!visible && 
+            <div>
+                <Title>Pop Quiz!</Title>
+                <img src="" alt="Quiz Intro Image" />
+                <button onClick={() => {
+                    setVisible(!visible)
+                }}>Start</button>
+            </div>
+            }
+            {visible && <Quiz />}
         </div>
     )
 }
 
-export default QuizPage;
+export default QuestionsPage;
 
-const Heading = styled.h1`
-    margin: 10px;
-    font-size: 30px;
-    font-weight: 600;
+const Title = styled.h1`
+    font-size: 1.5rem;
 `
-
-const Button = styled.a`
-    display: inline-block;
-    margin: 20px;
-    padding: 10px;
-    border-radius: 5px;
-    border: solid 1px black;
-    text-decoration: none;
-    color: black;
-    font-size: 15px;
-`
-
