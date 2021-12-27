@@ -5,6 +5,7 @@ import useSWR from 'swr';
 import { Error, Loading } from '../components'
 import { API_ENDPOINT } from '../constants'
 import { InventoryData } from "../types/inventory";
+import { MEDIA_QUERY_ENDPOINT } from "../constants";
 
 const InventoryPage: NextPage = () => {
     const route = 'inventory';
@@ -24,11 +25,20 @@ const InventoryPage: NextPage = () => {
                             return (
                                 <Item key={`futurama-inventory-${id}`}>
                                     <Title>{title}</Title>
-                                    <p>{category}</p>
-                                    <p>{description}</p>
-                                    <p>{slogan}</p>
-                                    <p>{price}</p>
-                                    <p>{stock}</p>
+                                    <div>
+                                        <Term>category</Term>
+                                        <Desc>{category}</Desc>
+                                    </div>
+                                    <Term>description</Term>
+                                    <Desc>{description}</Desc>
+                                    <Term>slogan</Term>
+                                    <Desc>{slogan}</Desc>
+                                    <div>
+                                        <Term>price</Term>
+                                        <Desc>{price}</Desc>
+                                    </div>
+                                    <Term>stock</Term>
+                                    <Desc>{stock}</Desc>
                                 </Item>
                             )
                         })}
@@ -59,8 +69,12 @@ const Heading = styled.h1`
 
 const Container = styled.div`
     display: grid;
-    grid-template-columns: 30% 10% 30%;
-    margin: 0 auto;
+    grid-template-columns: 2fr 1fr 2fr;
+    padding: 0 10vw;
+    @media (max-width: ${MEDIA_QUERY_ENDPOINT.LAPTOP}) {
+        margin: 0 10vw;
+        padding: 0;
+    }
 `
 
 const ItemListContainer = styled.div`
@@ -78,13 +92,26 @@ const ItemList = styled.div`
     height: 100%;
 `
 
-const Item = styled.div`
-    margin-bottom: 10px;
+const Item = styled.dl`
+    line-height: 140%;
+    padding: 10px 0;
     &:hover{
         background-color: rgb(103, 217, 219, 20%);
         cursor: pointer;
     }
 `
+const Term = styled.dt`
+    display: inline-block;
+    font-weight: 500;
+    margin-right: 10px;
+`
+
+const Desc = styled.dd`
+    display: inline-block;
+`
+
+
+
 
 
 const AddedItemListContainer = styled.div`
@@ -104,8 +131,9 @@ const AddedItemList = styled.div`
 
 const Title = styled.p`
     font-size: 1.2rem;
-    font-weight: 500;
+    font-weight: 700;
     color: #3C5659;
+    line-height: 180%;
 `
 
 const Button = styled.button`
