@@ -26,9 +26,17 @@ const InfoPage: NextPage = () => {
                         <Content>{yearsAired}</Content>
                         <Heading>Creators</Heading>
                         <Content>
-                            <Link href={creators[0].url}>
-                                <a>{creators[0].name}, </a>
-                            </Link> 
+                                {creators.map((creator)=>{
+                                    return (
+                                        <div key={`creators-${creators.indexOf(creator)}`}>
+                                            <Link href={creator.url}>
+                                            <a>{creator.name}</a>
+                                            </Link> 
+                                        </div>
+                                    )
+                                })
+
+                                }
                         </Content>
                         <Heading>Synopsis</Heading>
                         <Content>{synopsis}</Content>
