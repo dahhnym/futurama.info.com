@@ -27,25 +27,19 @@ export const Quiz = () => {
 
 
                     return (
-                        <div>
-                            <QuizCard key={`futurama-quiz-${id}`}>
-                                <Question key={`quiz-question-${id}`}>{question}</Question>
-                                <div key={`quiz-possibleAnswer-${id}`}>
-                                    {possibleAnswers.map((posAnswer: string) => {
-                                        return (
-                                            <div key={`possibleAnswer-option-${possibleAnswers.indexOf(posAnswer)}`}>
-                                                <input type="radio" id={posAnswer} name={`${id}`} value={posAnswer} />
-                                                <label htmlFor={posAnswer}>{posAnswer}</label>
-                                            </div>
-                                        )
-                                    })}
-                                </div>
-                            </QuizCard>
-                            {/* <button onClick={() => {
-                                setVisible(!visible)
-                                generateRandomNum()
-                            }}>Next</button> */}
-                        </div>
+                        <QuizCard key={`futurama-quiz-${id}`}>
+                            <Question key={`quiz-question-${id}`}>{question}</Question>
+                            <div key={`quiz-possibleAnswer-${id}`}>
+                                {possibleAnswers.map((posAnswer: string) => {
+                                    return (
+                                        <div key={`possibleAnswer-option-${possibleAnswers.indexOf(posAnswer)}`}>
+                                            <input type="radio" id={posAnswer} name={`${id}`} value={posAnswer} />
+                                            <label htmlFor={posAnswer}>{posAnswer}</label>
+                                        </div>
+                                    )
+                                })}
+                            </div>
+                        </QuizCard>
                     )
                 })}
             </Container>
